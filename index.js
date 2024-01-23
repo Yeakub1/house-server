@@ -18,7 +18,7 @@ app.use("/auth", auth);
 
 async function main() {
   await mongoose.connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.in81gjk.mongodb.net/house-hunter-db`
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.eypqquv.mongodb.net/house-hunter?retryWrites=true&w=majority`
   );
   try {
     app.listen(port, () => {
